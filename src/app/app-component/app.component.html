@@ -1,0 +1,25 @@
+<main class="page bg-white" id="petratings">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <app-add
+          (addEvt)="addApt($event)"></app-add>
+        <app-search
+          [query]= "query"
+          [orderBy]="orderBy"
+          [orderType]="orderType"          
+          (queryEvt)="searchApt($event)"
+          (orderEvt)="orderApt($event)"
+          ></app-search>
+        <app-list
+          [sortedList]="sortedList"
+          [query]="query"
+          (deleteEvt)="deleteApt($event)"
+          (updateEvt)="updateApt($event)"
+          ></app-list>
+
+      </div><!-- col-md-12 -->
+    </div><!-- row -->
+  </div><!-- container -->
+</main><!-- main -->

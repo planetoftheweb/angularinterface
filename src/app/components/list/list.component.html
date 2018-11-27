@@ -1,0 +1,23 @@
+<div class="appointment-list item-list mb-3">
+  <div class="pet-item col media py-3"
+    *ngFor="let item of sortedList">
+    <div class="mr-3">
+      <button class="pet-delete btn btn-sm btn-danger"
+      (click)="handleDelete(item)">
+      <fa-icon icon="times"></fa-icon></button>
+    </div><!-- media-left -->
+
+    <div class="pet-info media-body">
+      <div class="pet-head d-flex">
+        <span class="pet-name" contenteditable="true"  #petName (blur)="handleUpdate(item, 'petName', petName.innerText)">{{item.petName}}</span>
+        <span class="apt-date ml-auto">{{item.aptDate | date:'M/d/yy h:mm a'}}</span>
+      </div><!-- pet-head -->
+
+      <div class="owner-name">
+        <span class="label-item">Owner: </span>
+        <span contenteditable="true" #ownerName (blur)="handleUpdate(item, 'ownerName', ownerName.innerText)">{{item.ownerName}}</span>
+      </div>
+      <div class="apt-notes" contenteditable="true" #aptNotes (blur)="handleUpdate(item, 'aptNotes', aptNotes.innerText)">{{item.aptNotes}}</div>
+    </div><!-- pet-info -->
+  </div><!-- pet-item -->
+</div><!-- appointment-list -->
