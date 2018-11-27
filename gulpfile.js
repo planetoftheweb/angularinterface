@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
   webserver = require('gulp-server-io'),
   folderIndex = require('gulp-folder-index'),
-  source = './dist/',
-  dest = './dist/';
+  source = './docs/',
+  dest = './docs/';
 
 function html() {
   return gulp.src(dest + '**/*.html');
