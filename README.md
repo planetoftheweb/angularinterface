@@ -1,6 +1,6 @@
-# React: Single Page Applications
+# Building a Web Interface with Angular
 
-This is the repository for my course React Single Page Applications. The full course is available on LinkedIn Learning.
+This is the repository for my course Building a Web Interface with Angular. The full course is available on LinkedIn Learning.
 
 ## Instructions
 
