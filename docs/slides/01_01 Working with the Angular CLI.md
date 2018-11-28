@@ -6,7 +6,7 @@ Building an Interface
 
 > > Author Notes:
 
-The angular CLI or Command line interface makes it easy to create Angular applications by automating some of the steps.
+The angular CLI or Command line interface makes it easy to create Angular applications by automating some of the steps. You can get the CLI at this URL.
 
 ---
 
@@ -31,8 +31,6 @@ To install the Angular CLI, we're going to type in `npm install -g @angular/cli`
 
 - `cd ~/Desktop`
 - `ng new angularinterface`
-- open this in your favorite editor. For this course, I'm using Visual Studio Code
-- `ng serve`
 
 Answer a few questions:
 
