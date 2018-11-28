@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+/**  Basic Page CSS **/
+body {
+  font-weight: 200;
+  background-color: #337ab7;
+}
+
+header a,
+footer a {
+  color: white;
+}
+
+footer {
+  font-size: 0.8em;
+}
+
+.bg-primary,
+.btn-primary {
+  background-color: #377bb5 !important;
+  border: inherit;
+}
+
+.add-appointment .card-body {
+  display: none;
+}
+
+.apt-addheading {
+  cursor: pointer;
+  user-select: none;
+}
+
+.appointment-list {
+  font-size: 1.1em;
+}
+
+.appointment-list .pet-item {
+  border-bottom: 1px dotted gray;
+}
+
+.appointment-list .pet-item:last-child {
+  border-bottom: none;
+}
+
+.appointment-list .pet-name {
+  font-weight: 600;
+  color: #337ab7;
+  font-size: 1.3em;
+  line-height: 100%;
+}
+
+.appointment-list .label-item {
+  font-weight: 600;
+  color: #667b82;
+}
+
+.appointment-list .apt-date {
+  font-style: italic;
+}
+
+.appointment-list .apt-notes {
+  line-height: 120%;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  background-color: #a9aeb2;
+}
