@@ -1,8 +1,10 @@
-# Understanding Angular CLI folders
+## Understanding Angular CLI folders
 
-Let's take a look at what we get when we create a project with the Angular CLI. If you're into magic, this might mess with your suspension of disbelief that Angular works by pure magic, but if you're like me, you don't mind knowing what's responsible for what in your application.
+Let's take a look at what we get when we create a project with the Angular CLI.
 
-Note: This may look a little bit different depending on what commands you've run or the version of the CLI that you're using. I recorded this course using Angular 7
+If you're like me, you don't mind knowing what's responsible for what in your application. There's so much installed here that we'll break this up into two videos.
+
+Also, just a note: This may look a little bit different depending on what commands you've run or the version of the CLI that you're using. I recorded this course using Angular 7.
 
 - The `src` folder is the most important folder in your project. We'll be doing most of our work here, but let's talk about the other ones.
 

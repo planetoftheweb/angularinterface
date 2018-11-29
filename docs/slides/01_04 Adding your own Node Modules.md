@@ -27,5 +27,3 @@ We're going to add three different libraries for our project: Bootstrap, lodash 
 ```
 
 `> ng serve`
-
-From now on, we're going to be using the files in our repository so that if you want to see the code from this video, you can go to this URL and then look for a branch for the video we're working with. You'll be able to download the branch for with the code. If you haven't done so already, make sure you take a look at the Using the exercises video on this course.

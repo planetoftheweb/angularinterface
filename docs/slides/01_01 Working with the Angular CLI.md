@@ -10,7 +10,7 @@ The angular CLI or Command line interface makes it easy to create Angular applic
 
 ---
 
-Angular CLI
+## Angular CLI
 
 - [Node](https://nodejs.org/)
 - [Git](https://git-scm.com/)
