@@ -1,3 +1,21 @@
-<p>
-  list works!
-</p>
+<div class="appointment-list item-list mb-3">
+  <div class="pet-item col media py-3"
+    *ngFor="let item of aptList">
+    <div class="mr-3">
+      <button class="pet-delete btn btn-sm btn-danger"></button>
+    </div><!-- media-left -->
+
+    <div class="pet-info media-body">
+      <div class="pet-head d-flex">
+        <span class="pet-name" contenteditable="true">{{item.petName}}</span>
+        <span class="apt-date ml-auto">{{item.aptDate}}</span>
+      </div><!-- pet-head -->
+
+      <div class="owner-name">
+        <span class="label-item">Owner: </span>
+        <span contenteditable="true">{{item.ownerName}}</span>
+      </div>
+      <div class="apt-notes" contenteditable="true">{{item.aptNotes}}</div>
+    </div><!-- pet-info -->
+  </div><!-- pet-item -->
+</div><!-- appointment-list -->

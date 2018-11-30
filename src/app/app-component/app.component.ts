@@ -7,12 +7,13 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit {
   title = 'Wisdom Pet Medicine';
+  theList: object[];
 
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
-    this.http.get('../assets/data.json').subscribe(data => {
-      console.log(data);
+    this.http.get<Object[]>('../assets/data.json').subscribe(data => {
+      this.theList = data;
     });
   }
 }
