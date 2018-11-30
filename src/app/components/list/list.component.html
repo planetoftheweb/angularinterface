@@ -2,7 +2,8 @@
   <div class="pet-item col media py-3"
     *ngFor="let item of aptList">
     <div class="mr-3">
-      <button class="pet-delete btn btn-sm btn-danger">
+      <button class="pet-delete btn btn-sm btn-danger"
+       (click)="handleDelete(item)">
       <fa-icon icon="times"></fa-icon>
       </button>
     </div><!-- media-left -->
