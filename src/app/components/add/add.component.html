@@ -7,12 +7,15 @@
 
   <div class="card-body">
 
-    <form id="aptForm" novalidate>
+    <form id="aptForm" novalidate
+    (ngSubmit)="handleAdd(aptForm.value)"
+    #aptForm="ngForm"
+    >
     
       <div class="form-group form-row">
         <label class="col-md-2 col-form-label text-md-right" for="petName">Pet Name</label>
         <div class="col-md-10">
-          <input type="text" class="form-control" name="petName" id="petName" placeholder="Pet's Name">
+          <input type="text" class="form-control" name="petName" id="petName" placeholder="Pet's Name" ngModel>
         </div><!-- col-md-10 --> 
       </div><!-- form-group --> 
 
@@ -21,18 +24,18 @@
           for="ownerName">Pet Owner</label>
         <div class="col-md-10">
           <input type="text" class="form-control" name="ownerName"
-            id="ownerName" placeholder="Owner's Name">
+            id="ownerName" placeholder="Owner's Name" ngModel>
         </div><!-- col-md-10 -->
       </div><!-- form-group --> 
 
       <div class="form-group form-row">
         <label class="col-md-2 col-form-label text-md-right" for="aptDate">Date</label>
         <div class="col-md-4">
-          <input type="date" class="form-control" id="aptDate" name="aptDate">
+          <input type="date" class="form-control" id="aptDate" name="aptDate" ngModel>
         </div><!-- col-md-4 --> 
         <label class="col-md-2 col-form-label text-md-right" for="aptTime">Time</label>
         <div class="col-md-4">
-          <input type="time" class="form-control" name="aptTime" id="aptTime" >
+          <input type="time" class="form-control" name="aptTime" id="aptTime" ngModel>
         </div><!-- col-md-4 --> 
       </div><!-- form-group -->
 
@@ -40,7 +43,7 @@
         <label class="col-md-2 text-md-right" for="aptNotes">Apt. Notes</label>
         <div class="col-md-10">
           <textarea class="form-control" rows="4" cols="50"
-            name="aptNotes" id="aptNotes" placeholder="Appointment Notes"></textarea>
+            name="aptNotes" id="aptNotes" placeholder="Appointment Notes" ngModel></textarea>
         </div><!-- col-md-10 --> 
       </div><!-- form-group -->
 
