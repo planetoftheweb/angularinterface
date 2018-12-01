@@ -22,6 +22,22 @@ export class AppComponent implements OnInit {
     this.theList = without(this.theList, theApt);
   }
 
+  searchApt(theQuery: string) {
+    this.theList = this.theList.filter(eachItem => {
+      return (
+        eachItem['petName']
+          .toLowerCase()
+          .includes(theQuery.toLowerCase()) ||
+        eachItem['ownerName']
+          .toLowerCase()
+          .includes(theQuery.toLowerCase()) ||
+        eachItem['aptNotes']
+          .toLowerCase()
+          .includes(theQuery.toLowerCase())
+      );
+    });
+  }
+
   constructor(private http: HttpClient) {}
 
   ngOnInit(): void {
