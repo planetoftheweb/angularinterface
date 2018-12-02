@@ -10,10 +10,22 @@ import {
   templateUrl: './list.component.html'
 })
 export class ListComponent {
+  whichApt: object;
+
   @Input() aptList;
   @Output() deleteEvt = new EventEmitter();
+  @Output() updateEvt = new EventEmitter();
 
   handleDelete(theApt: object) {
     this.deleteEvt.emit(theApt);
+  }
+
+  handleUpdate(theApt: object, labelName: string, newValue: string) {
+    this.whichApt = theApt;
+    this.updateEvt.emit({
+      theApt: theApt,
+      labelName: labelName,
+      newValue: newValue
+    });
   }
 }
