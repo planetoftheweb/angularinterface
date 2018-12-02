@@ -1,6 +1,7 @@
 import {
   Component,
   OnInit,
+  Input,
   Output,
   EventEmitter
 } from '@angular/core';
@@ -10,6 +11,8 @@ import {
   templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
+  @Input() orderBy;
+  @Input() orderType;
   @Output() queryEvt = new EventEmitter<string>();
 
   handleQuery(query: string) {
