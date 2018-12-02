@@ -11,12 +11,12 @@
           </button>
 
           <div class="sort-menu dropdown-menu dropdown-menu-right">
-            <a class="sort-by dropdown-item" href="#">Pet Name</a>
-            <a class="sort-by dropdown-item" href="#">Date</a>
-            <a class="sort-by dropdown-item" href="#">Owner</a>
+            <a class="sort-by dropdown-item" href="#" [ngClass]="{'active': orderBy === 'petName'}">Pet Name</a>
+            <a class="sort-by dropdown-item" href="#" [ngClass]="{'active': orderBy === 'aptDate'}">Date</a>
+            <a class="sort-by dropdown-item" href="#" [ngClass]="{'active': orderBy === 'ownerName'}">Owner</a>
             <div role="separator" class="dropdown-divider"></div>
-            <a class="sort-dir dropdown-item" href="#">Asc</a>
-            <a class="sort-dir dropdown-item" href="#">Desc</a>
+            <a class="sort-dir dropdown-item" href="#" [ngClass]="{'active': orderType === 'asc'}">Asc</a>
+            <a class="sort-dir dropdown-item" href="#" [ngClass]="{'active': orderType === 'desc'}">Desc</a>
           </div>
         </div><!-- input-group-btn --> 
       </div><!-- input-group --> 
