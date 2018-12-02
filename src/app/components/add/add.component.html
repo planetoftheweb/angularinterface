@@ -3,7 +3,7 @@
     <div class="apt-addheading card-header bg-primary text-white"
       (click)="toggleAptDisplay()">
        <fa-icon icon="plus"></fa-icon> Add Appointment
-    </div><!-- card-header git-->
+    </div><!-- card-header -->
 
     <div class="card-body">
 
@@ -15,8 +15,7 @@
         <div class="form-group form-row">
           <label class="col-md-2 col-form-label text-md-right" for="petName">Pet Name</label>
           <div class="col-md-10">
-            <input type="text" class="form-control" name="petName" id="petName" placeholder="Pet's Name"
-           ngModel>
+            <input type="text" class="form-control" name="petName" id="petName" placeholder="Pet's Name" ngModel>
           </div><!-- col-md-10 --> 
         </div><!-- form-group --> 
 
@@ -36,14 +35,15 @@
           </div><!-- col-md-4 --> 
           <label class="col-md-2 col-form-label text-md-right" for="aptTime">Time</label>
           <div class="col-md-4">
-            <input type="time" class="form-control" name="aptTime" id="aptTime"  ngModel>
+            <input type="time" class="form-control" name="aptTime" id="aptTime" ngModel>
           </div><!-- col-md-4 --> 
         </div><!-- form-group -->
 
         <div class="form-group form-row">
           <label class="col-md-2 text-md-right" for="aptNotes">Apt. Notes</label>
           <div class="col-md-10">
-            <textarea class="form-control" rows="4" cols="50" name="aptNotes" id="aptNotes" placeholder="Appointment Notes" ngModel></textarea>
+            <textarea class="form-control" rows="4" cols="50"
+              name="aptNotes" id="aptNotes" placeholder="Appointment Notes" ngModel></textarea>
           </div><!-- col-md-10 --> 
         </div><!-- form-group -->
 

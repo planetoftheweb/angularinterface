@@ -4,10 +4,6 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-
-library.add(faPlus);
 
 @Component({
   selector: 'app-add',
@@ -15,6 +11,7 @@ library.add(faPlus);
 })
 export class AddComponent implements OnInit {
   showForm: boolean;
+
   @Output() addEvt = new EventEmitter();
 
   toggleAptDisplay() {

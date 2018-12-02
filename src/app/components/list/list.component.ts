@@ -1,18 +1,17 @@
 import {
   Component,
-  OnInit,
-  EventEmitter,
+  Input,
   Output,
-  Input
+  EventEmitter
 } from '@angular/core';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html'
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
   whichApt: object;
-  @Input() sortedList;
+  @Input() aptList;
   @Input() query;
   @Output() deleteEvt = new EventEmitter();
   @Output() updateEvt = new EventEmitter();
@@ -32,6 +31,4 @@ export class ListComponent implements OnInit {
   }
 
   constructor() {}
-
-  ngOnInit() {}
 }
