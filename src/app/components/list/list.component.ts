@@ -19,13 +19,4 @@ export class ListComponent {
   handleDelete(theApt: object) {
     this.deleteEvt.emit(theApt);
   }
-
-  handleUpdate(theApt: object, labelName: string, newValue: string) {
-    this.whichApt = theApt;
-    this.updateEvt.emit({
-      theApt: theApt,
-      labelName: labelName,
-      newValue: newValue
-    });
-  }
 }
