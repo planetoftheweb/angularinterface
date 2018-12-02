@@ -14,9 +14,16 @@ export class SearchComponent implements OnInit {
   @Input() orderBy;
   @Input() orderType;
   @Output() queryEvt = new EventEmitter<string>();
+  @Output() orderEvt = new EventEmitter<string>();
 
   handleQuery(query: string) {
     this.queryEvt.emit(query);
+  }
+
+  handleSort(orderItems) {
+    this.orderBy = orderItems.orderBy;
+    this.orderType = orderItems.orderType;
+    this.orderEvt.emit(orderItems);
   }
 
   constructor() {}
