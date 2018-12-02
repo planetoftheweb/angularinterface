@@ -1,6 +1,6 @@
 <div class="appointment-list item-list mb-3">
   <div class="pet-item col media py-3"
-    *ngFor="let item of aptList">
+    *ngFor="let item of aptList; index as aptId">
     <div class="mr-3">
       <button class="pet-delete btn btn-sm btn-danger"
        (click)="handleDelete(item)">
@@ -10,7 +10,7 @@
 
     <div class="pet-info media-body">
       <div class="pet-head d-flex">
-        <span class="pet-name" contenteditable="true">{{item.petName}}</span>
+        <span class="pet-name" contenteditable="true">{{item.aptId}}--{{item.petName}}</span>
         <span class="apt-date ml-auto">{{item.aptDate | date: 'M-d h:mm a'}}</span>
       </div><!-- pet-head -->
 
