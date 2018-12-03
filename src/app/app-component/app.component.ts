@@ -89,6 +89,7 @@ export class AppComponent implements OnInit {
       });
       this.modifiedList = data;
       this.sortItems();
+      console.log(this.modifiedList);
     });
   }
 }
