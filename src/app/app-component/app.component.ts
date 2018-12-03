@@ -15,10 +15,13 @@ export class AppComponent implements OnInit {
   modifiedList: object[];
   orderBy: string;
   orderType: string;
+  lastIndex: number;
 
-  addApt(theApt: object) {
+  addApt(theApt: any) {
+    theApt.aptId = this.lastIndex;
     this.theList.unshift(theApt);
     this.modifiedList.unshift(theApt);
+    this.lastIndex++;
   }
 
   deleteApt(theApt: object) {
@@ -78,8 +81,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.lastIndex = 0;
     this.http.get<Object[]>('../assets/data.json').subscribe(data => {
-      this.theList = data;
+      this.theList = data.map((item: any) => {
+        item.aptId = this.lastIndex++;
+        return item;
+      });
       this.modifiedList = data;
       this.sortItems();
     });
