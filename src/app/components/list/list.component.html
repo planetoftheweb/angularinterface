@@ -10,15 +10,18 @@
 
     <div class="pet-info media-body">
       <div class="pet-head d-flex">
-        <span class="pet-name" contenteditable="true">{{item.petName}}</span>
+        <span class="pet-name" contenteditable="true"
+        #petName (blur)="handleUpdate(item, 'petName', petName.innerText)">{{item.petName}}</span>
         <span class="apt-date ml-auto">{{item.aptDate | date: 'M-d h:mm a'}}</span>
       </div><!-- pet-head -->
 
       <div class="owner-name">
         <span class="label-item">Owner: </span>
-        <span contenteditable="true">{{item.ownerName}}</span>
+        <span contenteditable="true"
+        #ownerName (blur)="handleUpdate(item, 'ownerName', ownerName.innerText)">{{item.ownerName}}</span>
       </div>
-      <div class="apt-notes" contenteditable="true">{{item.aptNotes}}</div>
+      <div class="apt-notes" contenteditable="true"
+      #aptNotes (blur)="handleUpdate(item, 'aptNotes', aptNotes.innerText)">{{item.aptNotes}}</div>
     </div><!-- pet-info -->
   </div><!-- pet-item -->
 </div><!-- appointment-list -->
