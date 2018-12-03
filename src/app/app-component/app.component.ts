@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   modifiedList: object[];
   orderBy: string;
   orderType: string;
-  lastIndex = 0;
+  lastIndex: number;
 
   addApt(theApt: any) {
     theApt.aptId = this.lastIndex;
@@ -83,8 +83,7 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.lastIndex = 0;
     this.http.get<Object[]>('../assets/data.json').subscribe(data => {
-      this.theList = data;
-      this.theList = this.theList.map((item: any) => {
+      this.theList = data.map((item: any) => {
         item.aptId = this.lastIndex++;
         return item;
       });
